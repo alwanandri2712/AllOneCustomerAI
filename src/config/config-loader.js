@@ -22,6 +22,9 @@ class ConfigLoader {
             // Load company information
             const companyInfo = await this.loadCompanyInfo();
             
+            // Load language configurations
+            const languages = await this.loadLanguages();
+            
             this.config = {
                 bot: {
                     name: envConfig.BOT_NAME || 'AllOneCustomerAI',
@@ -57,7 +60,8 @@ class ConfigLoader {
                 },
                 language: envConfig.DEFAULT_LANGUAGE || 'id',
                 customPrompts,
-                companyInfo
+                companyInfo,
+                languages
             };
             
             return this.config;
@@ -134,6 +138,32 @@ class ConfigLoader {
                 email: "info@yourcompany.com",
                 phone: "+62xxxxxxxxxx",
                 website: "https://yourcompany.com"
+            }
+        };
+    }
+
+    async loadLanguages() {
+        const languagesPath = process.env.LANGUAGES_FILE || './config/languages.json';
+        
+        try {
+            if (await fs.pathExists(languagesPath)) {
+                return await fs.readJson(languagesPath);
+            }
+        } catch (error) {
+            console.warn(`Could not load languages from ${languagesPath}:`, error.message);
+        }
+        
+        // Return default languages (Indonesian only)
+        return {
+            id: {
+                name: "Bahasa Indonesia",
+                code: "id",
+                systemPrompt: "Anda adalah asisten AI customer service yang profesional dan membantu.",
+                messages: {
+                    welcome: "Halo! Selamat datang di layanan customer service AI kami.",
+                    fallback: "Maaf, saya tidak sepenuhnya memahami pertanyaan Anda.",
+                    error: "Maaf, terjadi kesalahan teknis."
+                }
             }
         };
     }

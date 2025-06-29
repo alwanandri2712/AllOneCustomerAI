@@ -1,0 +1,38 @@
+{
+  "id": {
+    "name": "Bahasa Indonesia",
+    "code": "id",
+    "systemPrompt": "Anda adalah asisten AI customer service yang profesional dan membantu. Peran Anda adalah membantu pelanggan dengan pertanyaan mereka, memberikan informasi yang akurat, dan memastikan pengalaman pelanggan yang excellent. Selalu merespons dalam bahasa Indonesia kecuali diminta sebaliknya. Bersikaplah sopan, empati, dan berorientasi pada solusi dalam respons Anda.",
+    "messages": {
+      "welcome": "Halo! Selamat datang di layanan customer service AI kami. Saya siap membantu Anda dengan pertanyaan atau kebutuhan Anda. Ada yang bisa saya bantu hari ini?",
+      "fallback": "Maaf, saya tidak sepenuhnya memahami pertanyaan Anda. Bisakah Anda menjelaskan lebih detail atau menggunakan kata-kata yang berbeda? Saya akan berusaha membantu Anda dengan lebih baik.",
+      "goodbye": "Terima kasih telah menghubungi kami. Semoga hari Anda menyenangkan! Jangan ragu untuk menghubungi kami lagi jika ada yang bisa kami bantu.",
+      "error": "Maaf, terjadi kesalahan teknis. Tim kami sedang memperbaiki masalah ini. Silakan coba lagi dalam beberapa menit atau hubungi customer service kami langsung.",
+      "reset": "Sesi percakapan telah direset. Silakan mulai percakapan baru.",
+      "languageChanged": "Bahasa telah diubah ke Bahasa Indonesia. Saya akan merespons dalam bahasa Indonesia mulai sekarang.",
+      "languageList": "🌐 *Pilihan Bahasa*\n\nBahasa yang tersedia:\n• /language id - Bahasa Indonesia\n• /language en - English\n\nKirim perintah di atas untuk mengubah bahasa.",
+      "help": "🤖 *Bantuan AllOneCustomerAI*\n\nPerintah yang tersedia:\n• /help - Menampilkan pesan bantuan ini\n• /info - Informasi perusahaan\n• /reset - Reset sesi percakapan\n• /status - Lihat status akun Anda\n• /provider - Informasi AI provider\n• /language - Pilih bahasa\n\nAnda juga dapat mengirim pesan biasa untuk berbicara dengan AI customer service kami.",
+      "status": "Status Anda:\nNama: {name}\nTotal Pesan: {messageCount}\nTerakhir Aktif: {lastSeen}\nBahasa: {language}\nAI Provider: {provider}",
+      "userNotFound": "Informasi pengguna tidak ditemukan."
+    }
+  },
+  "en": {
+    "name": "English",
+    "code": "en",
+    "systemPrompt": "You are a professional and helpful AI customer service assistant. Your role is to assist customers with their inquiries, provide accurate information, and ensure excellent customer experience. Always respond in English unless specifically requested otherwise. Be polite, empathetic, and solution-oriented in your responses.",
+    "messages": {
+      "welcome": "Hello! Welcome to our AI customer service. I'm ready to help you with your questions or needs. How can I assist you today?",
+      "fallback": "I'm sorry, I don't fully understand your question. Could you please explain in more detail or use different words? I'll try to help you better.",
+      "goodbye": "Thank you for contacting us. Have a great day! Don't hesitate to contact us again if there's anything we can help with.",
+      "error": "Sorry, a technical error occurred. Our team is fixing this issue. Please try again in a few minutes or contact our customer service directly.",
+      "reset": "Conversation session has been reset. Please start a new conversation.",
+      "languageChanged": "Language has been changed to English. I will respond in English from now on.",
+      "languageList": "🌐 *Language Options*\n\nAvailable languages:\n• /language id - Bahasa Indonesia\n• /language en - English\n\nSend the command above to change language.",
+      "help": "🤖 *AllOneCustomerAI Help*\n\nAvailable commands:\n• /help - Show this help message\n• /info - Company information\n• /reset - Reset conversation session\n• /status - View your account status\n• /provider - AI provider information\n• /language - Choose language\n\nYou can also send regular messages to chat with our AI customer service.",
+        "greeting": "Hello! Welcome to {companyName}. I am an AI assistant ready to help you. How can I assist you today?",
+        "gratitude": "You're welcome! I'm glad I could help you. If you have any other questions, feel free to ask.",
+      "status": "Your Status:\nName: {name}\nTotal Messages: {messageCount}\nLast Active: {lastSeen}\nLanguage: {language}\nAI Provider: {provider}",
+      "userNotFound": "User information not found."
+    }
+  }
+}

@@ -13,7 +13,7 @@ AllOneCustomerAI adalah solusi customer service berbasis AI yang dapat disesuaik
 - 👥 **Multi-User Support** - Menangani multiple users secara bersamaan
 - 📊 **Analytics & Reporting** - Statistik penggunaan dan performa
 - 🔐 **Admin Panel** - Command khusus untuk administrator
-- 🌐 **Multi-Language** - Dukungan bahasa Indonesia dan English
+- 🌐 **Multi-Language Support** - Bahasa Indonesia (default) dan English dengan user preference storage
 - ⚡ **Real-time Processing** - Respons cepat dan real-time
 
 ## 🚀 Quick Start
@@ -206,6 +206,10 @@ Bot mendukung tiga AI provider:
 - `/reset` - Reset sesi percakapan
 - `/status` - Status akun user
 - `/provider` - Informasi AI provider yang sedang digunakan
+- `/language` - Mengubah bahasa interface
+  - `/language` - Menampilkan pilihan bahasa
+  - `/language id` - Mengubah ke Bahasa Indonesia
+  - `/language en` - Mengubah ke English
 
 ### Admin Commands
 
@@ -236,6 +240,74 @@ Bot secara otomatis melacak:
 - Session management
 
 Data analytics dapat diakses melalui admin commands atau langsung dari database.
+
+## 🌐 Multi-Language Support
+
+Bot mendukung sistem multi-bahasa dengan fitur deteksi otomatis:
+
+### Bahasa yang Didukung
+- **Bahasa Indonesia** (default) - `id`
+- **English** - `en`
+
+### Fitur Multi-Bahasa
+- **Automatic Language Detection**: AI secara otomatis mendeteksi bahasa user dari pesan mereka
+- **Smart Language Learning**: Bahasa yang terdeteksi otomatis disimpan sebagai preferensi user
+- **User Preference Storage**: Preferensi bahasa disimpan per user di database
+- **Dynamic Language Switching**: User dapat mengubah bahasa kapan saja dengan command `/language`
+- **Localized Messages**: Semua pesan sistem (welcome, help, error, dll) tersedia dalam kedua bahasa
+- **Contextual Responses**: AI responses menggunakan system prompt sesuai bahasa user
+- **Placeholder Support**: Template pesan dengan placeholder seperti `{companyName}`
+
+### Cara Kerja Auto-Detection
+Sistem menggunakan heuristik cerdas untuk mendeteksi bahasa:
+- **Word Pattern Analysis**: Menganalisis kata-kata dan frasa umum dalam setiap bahasa
+- **Grammar Pattern Recognition**: Mengidentifikasi pola grammar spesifik bahasa
+- **Confidence Scoring**: Hanya mengganti bahasa ketika tingkat kepercayaan deteksi tinggi
+- **Automatic Preference Saving**: Bahasa yang terdeteksi disimpan untuk percakapan selanjutnya
+
+### Menggunakan Fitur Multi-Bahasa
+```
+/language          # Menampilkan pilihan bahasa
+/language id       # Mengubah ke Bahasa Indonesia
+/language en       # Mengubah ke English
+```
+
+**Catatan**: User tidak perlu mengatur bahasa secara manual - AI akan otomatis mendeteksi dan menyesuaikan dengan bahasa preferensi mereka berdasarkan pesan yang dikirim.
+
+### Contoh Auto-Detection
+```
+# User mengirim pesan dalam bahasa Inggris
+User: "Hello, I need help with my order"
+AI: Detects English → Switches to English → Saves preference
+AI: "Hello! I'd be happy to help you with your order..."
+
+# User mengirim pesan dalam bahasa Indonesia  
+User: "Halo, saya perlu bantuan dengan pesanan saya"
+AI: Detects Indonesian → Switches to Indonesian → Saves preference
+AI: "Halo! Saya akan membantu Anda dengan pesanan..."
+
+# Pesan selanjutnya otomatis menggunakan bahasa yang tersimpan
+User: "Thanks!"
+AI: Uses saved preference (English)
+AI: "You're welcome! Is there anything else I can help you with?"
+```
+
+### Konfigurasi Bahasa
+Konfigurasi bahasa tersimpan di `config/languages.json` dengan struktur:
+```json
+{
+  "id": {
+    "name": "Bahasa Indonesia",
+    "systemPrompt": "...",
+    "messages": { ... }
+  },
+  "en": {
+    "name": "English",
+    "systemPrompt": "...",
+    "messages": { ... }
+  }
+}
+```
 
 ## 🔒 Security
 

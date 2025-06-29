@@ -174,7 +174,7 @@ class WhatsAppBot {
             const intent = await this.aiService.analyzeUserIntent(messageText);
             
             // Generate AI response
-            const response = await this.aiService.getContextualResponse(intent, messageText, phoneNumber);
+            const response = await this.aiService.getContextualResponse(phoneNumber, intent, user, messageText);
             
             // Send response
             await this.sendMessage(phoneNumber, response);
