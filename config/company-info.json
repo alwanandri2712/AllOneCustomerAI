@@ -1,0 +1,72 @@
+{
+  "name": "PT. Contoh Perusahaan",
+  "description": "Kami adalah perusahaan yang berkomitmen memberikan layanan terbaik kepada pelanggan dengan dukungan teknologi AI terdepan.",
+  "workingHours": "Senin - Jumat, 08:00 - 17:00 WIB",
+  "timezone": "Asia/Jakarta",
+  "contact": {
+    "email": "info@contohperusahaan.com",
+    "phone": "+62-21-1234-5678",
+    "whatsapp": "+62-812-3456-7890",
+    "website": "https://www.contohperusahaan.com",
+    "address": "Jl. Contoh No. 123, Jakarta Selatan, DKI Jakarta 12345"
+  },
+  "departments": {
+    "sales": {
+      "name": "Tim Penjualan",
+      "email": "sales@contohperusahaan.com",
+      "phone": "+62-21-1234-5679",
+      "description": "Untuk pertanyaan mengenai produk, harga, dan pembelian"
+    },
+    "technical_support": {
+      "name": "Tim Teknis",
+      "email": "support@contohperusahaan.com",
+      "phone": "+62-21-1234-5680",
+      "description": "Untuk bantuan teknis dan troubleshooting"
+    },
+    "billing": {
+      "name": "Tim Billing",
+      "email": "billing@contohperusahaan.com",
+      "phone": "+62-21-1234-5681",
+      "description": "Untuk pertanyaan mengenai tagihan dan pembayaran"
+    }
+  },
+  "services": [
+    {
+      "name": "Layanan Konsultasi",
+      "description": "Konsultasi bisnis dan teknologi untuk meningkatkan efisiensi perusahaan Anda",
+      "category": "consulting"
+    },
+    {
+      "name": "Pengembangan Software",
+      "description": "Pembuatan aplikasi dan sistem sesuai kebutuhan bisnis Anda",
+      "category": "development"
+    },
+    {
+      "name": "Maintenance & Support",
+      "description": "Layanan pemeliharaan dan dukungan teknis berkelanjutan",
+      "category": "support"
+    }
+  ],
+  "socialMedia": {
+    "facebook": "https://facebook.com/contohperusahaan",
+    "instagram": "https://instagram.com/contohperusahaan",
+    "linkedin": "https://linkedin.com/company/contohperusahaan",
+    "twitter": "https://twitter.com/contohperusahaan"
+  },
+  "policies": {
+    "privacy": "https://www.contohperusahaan.com/privacy-policy",
+    "terms": "https://www.contohperusahaan.com/terms-of-service",
+    "refund": "https://www.contohperusahaan.com/refund-policy"
+  },
+  "emergencyContact": {
+    "phone": "+62-812-9999-9999",
+    "email": "emergency@contohperusahaan.com",
+    "description": "Untuk urusan mendesak di luar jam kerja"
+  },
+  "customFields": {
+    "founded": "2020",
+    "employees": "50-100",
+    "industry": "Technology & Consulting",
+    "certifications": ["ISO 9001:2015", "ISO 27001:2013"]
+  }
+}
